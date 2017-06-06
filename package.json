@@ -1,0 +1,35 @@
+{
+  "name": "botframework-kik-example-bot",
+  "version": "1.0.0",
+  "description": "Kik example bot for Bot Framework Node SDK",
+  "main": "index.js",
+  "engines": {
+    "node": "6.10.2",
+    "npm": "3.10.10"
+  },
+  "scripts": {
+    "start": "node index",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nwhitmont/botframework-kik-example-bot.git"
+  },
+  "keywords": [
+    "botframework",
+    "botbuilder",
+    "nodejs",
+    "kik",
+    "chatbot"
+  ],
+  "author": "Nils Whitmont",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nwhitmont/botframework-kik-example-bot/issues"
+  },
+  "homepage": "https://github.com/nwhitmont/botframework-kik-example-bot#readme",
+  "dependencies": {
+    "botbuilder": "^3.8.4",
+    "restify": "^4.3.0"
+  }
+}
