@@ -11,7 +11,7 @@ server.listen(process.env.port || process.env.PORT || 3978, function () {
 });
 
 server.get('/', function (request, response, next) {
-    response.send(200, { status: 'online' });
+    response.send(200, { status: 'kik bot is online' });
     next();
 });
 
