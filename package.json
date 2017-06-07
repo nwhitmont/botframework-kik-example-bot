@@ -2,13 +2,13 @@
   "name": "botframework-kik-example-bot",
   "version": "1.0.0",
   "description": "Kik example bot for Bot Framework Node SDK",
-  "main": "index.js",
+  "main": "server.js",
   "engines": {
     "node": "6.10.2",
     "npm": "3.10.10"
   },
   "scripts": {
-    "start": "node index"
+    "start": "node server"
   },
   "repository": {
     "type": "git",
