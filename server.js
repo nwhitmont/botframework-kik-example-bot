@@ -26,27 +26,30 @@ var connector = new builder.ChatConnector({
 });
 server.post('/api/messages', connector.listen());
 
-var bot = new builder.UniversalBot(connector, [
-    function (session) {
-        builder.Prompts.choice(session, 'What card would like to test?', CardNames, {
-            maxRetries: 3,
-            retryPrompt: 'Ooops, what you wrote is not a valid option, please try again'
-        });
-    },
-    function (session, results) {
+var bot = new builder.UniversalBot(connector, function(session) {
+    session.endDialog('Hello Kik world');
+});
+// var bot = new builder.UniversalBot(connector, [
+//     function (session) {
+//         builder.Prompts.choice(session, 'What card would like to test?', CardNames, {
+//             maxRetries: 3,
+//             retryPrompt: 'Ooops, what you wrote is not a valid option, please try again'
+//         });
+//     },
+//     function (session, results) {
 
-        // create the card based on selection
-        var selectedCardName = results.response.entity;
-        var card = createCard(selectedCardName, session);
+//         // create the card based on selection
+//         var selectedCardName = results.response.entity;
+//         var card = createCard(selectedCardName, session);
 
-        // attach the card to the reply message
-        var msg = new builder.Message(session).addAttachment(card);
-        session.send(msg);
+//         // attach the card to the reply message
+//         var msg = new builder.Message(session).addAttachment(card);
+//         session.send(msg);
 
-        session.send("Audio, video card should work now?");
-        session.endConversation();
-    }
-]);
+//         session.send("Audio, video card should work now?");
+//         session.endConversation();
+//     }
+// ]);
 
 var HeroCardName = 'Hero card';
 var ThumbnailCardName = 'Thumbnail card';
